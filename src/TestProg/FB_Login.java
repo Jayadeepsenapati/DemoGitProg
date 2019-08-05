@@ -13,7 +13,7 @@ public class FB_Login {
 		System.setProperty("webdriver.chrome.driver","E:\\mindq\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://facebook.com");
-		Thread.sleeo(3000);
+		Thread.sleep(3000);
 		driver.findElement(By.name("email")).sendKeys("jayadeep.senapatii@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("jayenj0y");
 		driver.findElement(By.xpath("//*[@value='Log In']")).click();
