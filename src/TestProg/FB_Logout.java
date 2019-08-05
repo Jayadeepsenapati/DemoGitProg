@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FB_Login {
+public class FB_Logout {
 
 	public static void main(String[] args) throws Exception
 	{
@@ -15,7 +15,10 @@ public class FB_Login {
 		driver.findElement(By.name("email")).sendKeys("jayadeep.senapatii@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("jayenj0y");
 		driver.findElement(By.xpath("//*[@value='Log In']")).click();
+		driver.findElement(By.id("logoutMenu")).click();
+		driver.findElement(By.xpath("//li[contains(@data-gt,'menu_logout')]")).click();
 		driver.close();
+
 	}
 
 }
