@@ -8,12 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FB_Login {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws Exception
 	{
 		System.setProperty("webdriver.chrome.driver","E:\\mindq\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://facebook.com");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleeo(3000);
 		driver.findElement(By.name("email")).sendKeys("jayadeep.senapatii@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("jayenj0y");
 		driver.findElement(By.xpath("//*[@value='Log In']")).click();
